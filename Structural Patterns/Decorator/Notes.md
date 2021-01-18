@@ -23,4 +23,20 @@ Design
 Key relationships : 
     - Given that the Decorator implements the IComponent interface, they can be used wherever the Component Objects were used.
         - This fact that the client can use the Decorator and the Component Objects interchangably is the heart of the Decorator pattern.
+    - Has a Relationship
+        - The decorator and the IComponent have a "has a relationship" indicating that the decorator instantiates one or more IComponent Objects.
+            - This goes on to say that the decorator can invoke the component attribute to invoke any method it may wish to override.
+
+Good to know points : 
+    - There are two more parts in the Decorator : 
+        - addedBehaviour and addedState : these two are ways of extending the original behavior of the component.
+
+    - Each Decorator contains a IComponent Interface object. 
+        - This could be a component or in turn another decorator. 
+        - Thus decorators can be nested.    
     
+    - Decorators can either add a new Operation to the component or replace/override an existing operation.
+
+    - Decorators do not rely on Inheritance for extending behaviour as this would make the classes overweight.
+
+.\Code Example contains a simple example implementing these 4 pieces.
